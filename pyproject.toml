@@ -1,6 +1,6 @@
 [project]
 name = "stream-schedule-scraper"
 version = "0.1"
-dependencies = ["requests", "beautifulsoup4"]
+dependencies = ["requests", "python-dotenv"]
 license = { file = "LICENSE" }
 readme = "README.md"
