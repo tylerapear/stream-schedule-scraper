@@ -1,5 +1,5 @@
 [project]
-name = "stream-schedule-scraper"
+name = "Twitch-Scout"
 version = "0.1"
 dependencies = ["requests", "python-dotenv", "platformdirs"]
 license = { file = "LICENSE" }
