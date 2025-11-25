@@ -41,3 +41,6 @@ class TestGetBroadcasterData(unittest.TestCase):
         self.assertTrue("canceled_until" in schedule["data"]["segments"][0])
         self.assertTrue("category" in schedule["data"]["segments"][0])
         self.assertTrue("is_recurring" in schedule["data"]["segments"][0])
+        
+        schedule = get_broadcaster_schedule("Linkus7", self.token, self.CLIENT_ID)
+        self.assertEqual(None, schedule)

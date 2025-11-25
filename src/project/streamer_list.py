@@ -36,7 +36,7 @@ def get_streamers():
 
 def remove_streamer(username):
     streamers = get_streamers()
-    streamers = [s for s in streamers if s != username]
+    streamers = [s for s in streamers if s['username'] != username]
     write_file(json.dumps({"streamers": streamers}))
     
 def streamer_exists(username, token, CLIENT_ID):

@@ -43,4 +43,6 @@ def get_broadcaster_schedule(username, token, CLIENT_ID):
             "Authorization": f"Bearer {token}"
         }
     )
+    if response.json().get("error"):
+        return None
     return response.json()
