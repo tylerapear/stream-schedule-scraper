@@ -26,7 +26,7 @@ def print_streamers():
             typewriter(streamer['username'], newline=True)
         return True
     else:
-        print("\nNo streamers added yet\n")
+        typewriter(f"\n\033[31mNo streamers added yet.\033\n[0m")
         time.sleep(1)
         typewriter("\n\033[34mReturning to main menu...\033[0m\n", delay=0.02)
         return False
@@ -86,7 +86,8 @@ ___________       .__  __         .__        _________                    __
                 remove_streamer(username)
                 typewriter(f"\n\033[32mStreamer {username} removed.\033\n[0m")
             case '3':
-                print_streamers()
+                if not print_streamers():
+                    continue
             case '4':
                 if not print_streamers():
                     continue
